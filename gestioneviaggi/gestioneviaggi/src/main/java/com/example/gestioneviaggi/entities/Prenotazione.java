@@ -3,7 +3,6 @@ package com.example.gestioneviaggi.entities;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
-import java.util.UUID;
 
 @Entity
 @Table(name = "prenotazioni")
@@ -41,7 +40,7 @@ public class Prenotazione {
     }
 
     public LocalDate getDataRichiesta() {
-        return dataRichiesta;
+        return this.dataRichiesta;
     }
 
     public void setDataRichiesta(LocalDate dataRichiesta) {
@@ -54,6 +53,22 @@ public class Prenotazione {
 
     public void setNoteViaggio(String noteViaggio) {
         this.noteViaggio = noteViaggio;
+    }
+
+    public Dipendente getDipendente() {
+        return dipendente;
+    }
+
+    public void setDipendente(Dipendente dipendente) {
+        this.dipendente = dipendente;
+    }
+
+    public Viaggio getViaggio() {
+        return viaggio;
+    }
+
+    public void setViaggio(Viaggio viaggio) {
+        this.viaggio = viaggio;
     }
 
     @Override
